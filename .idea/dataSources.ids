@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - hospital@localhost" uuid="2d4723e0-3ae6-41d9-904a-39b55292a3f2">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="hospital"/>
+    <table name="drugs" schema="" catalog="hospital" type="TABLE">
+      <column name="drugid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="drugid"/>
+      <foreign-key name="drugs_ibfk_1" columns="id" ref-table="patient" ref-schema="" ref-catalog="hospital" ref-columns="Id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="patient" schema="" catalog="hospital" type="TABLE">
+      <column name="Id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="first_name" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="last_name" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="dob" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" remarks="dGhlIGRhdGUgb2YgYmlydGggb2YgdGhlIHBhdGllbnQ="/>
+      <column name="time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" remarks="dGhlIGRhdGUgdGhlIHBhdGllbnQgd2FzIHJlZ2lzdGVyZWQ="/>
+      <primary-key name="PRIMARY" columns="Id"/>
+      <exported-key name="drugs_ibfk_1" table="drugs" schema="" catalog="hospital" columns="id"/>
+    </table>
+  </data-source>
+</component>
