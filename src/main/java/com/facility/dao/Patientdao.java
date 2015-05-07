@@ -10,8 +10,6 @@ public interface Patientdao {
 
     public int insertRow(Patients patients);
 
-    public Patients getEmployeeById(int id);
-
     public List<Patients> getList();
 
     public int updateRow(Patients patients);

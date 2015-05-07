@@ -1,5 +1,6 @@
 package com.facility.dao;
-//import com.facility.dao.Patientdao;
+
+import com.facility.dao.Patientdao;
 import com.facility.models.Patients;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -8,14 +9,14 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
-//import javax.transaction.Transactional;
+import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by user on 5/6/2015.
  */
-Public class PatientdaoImpl implements Patientdao {
+public class PatientdaoImpl implements Patientdao {
 
 
         @Autowired
@@ -34,20 +35,10 @@ Public class PatientdaoImpl implements Patientdao {
         }
 
         @Override
-        public Patients getPatientsById(int id) {
-            Session session = sessionFactory.openSession();
-            Criteria criteria = session.createCriteria(Patients.class);
-            criteria.add(Restrictions.eq("id", id));
-            Patients patients = (Patients) criteria.uniqueResult();
-            session.close();
-            return patients;
-        }
-
-        @Override
         public List<Patients> getList() {
             Session session = sessionFactory.openSession();
             @SuppressWarnings("unchecked")
-            List<Patients> patientsList = session.createQuery("from Patients").list();
+            List<Patients> patientsList = session.createQuery("from ").list();
             session.close();
             return patientsList;
         }

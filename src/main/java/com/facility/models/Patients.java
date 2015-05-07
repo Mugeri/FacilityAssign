@@ -2,7 +2,10 @@ package com.facility.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by user on 5/6/2015.
@@ -11,7 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="patient")
 public class Patients {
-
+    @Id
     @GeneratedValue
     private int id;
 
@@ -23,13 +26,9 @@ public class Patients {
     private String dob;
 
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
+    private String time;
 
     public String getFirst_name() {
         return first_name;
@@ -53,5 +52,13 @@ public class Patients {
 
     public void setDob(String dob) {
         this.dob = dob;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
