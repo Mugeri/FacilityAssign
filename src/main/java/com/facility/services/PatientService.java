@@ -16,5 +16,7 @@ public interface PatientService {
 
     public int deleteRow(int id);
 
+    public Patients getPatientById(int id);
+
 
 }

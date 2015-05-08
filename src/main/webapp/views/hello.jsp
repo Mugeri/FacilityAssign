@@ -18,6 +18,9 @@
 </c:if>
 --%>
 
+<form action="<c:url value='/view' />" method='POST'>
+<button>add drug</button>
+    </form>
 <form action="<c:url value='/create' />" method='POST'>
 
     <input type="text" placeholder="first name" name="fname" >

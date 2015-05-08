@@ -1,6 +1,12 @@
-com\facility\services\PatientServiceImpl.class
+com\facility\services\DrugServiceImpl.class
 com\facility\models\Patients.class
 com\facility\dao\PatientdaoImpl.class
+com\facility\dao\DrugdaoImpl.class
+com\facility\dao\Drugdao.class
+com\facility\services\PatientService.class
+com\facility\services\PatientServiceImpl.class
+com\facility\services\DrugService.class
+com\facility\models\Drugs.class
+com\facility\controllers\DrugController.class
 com\facility\dao\Patientdao.class
 com\facility\controllers\PatientController.class
-com\facility\services\PatientService.class

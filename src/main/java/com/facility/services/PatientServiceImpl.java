@@ -22,6 +22,12 @@ public class PatientServiceImpl implements PatientService{
     public List<Patients> getList() {
         return patientdao.getList();
     }
+
+    @Override
+    public Patients getPatientById(int id){
+        return patientdao.getPatientsById(id);
+    }
+
     @Override
     public int updateRow(Patients patients) {
         return patientdao.updateRow(patients);

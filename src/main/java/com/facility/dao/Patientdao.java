@@ -15,5 +15,7 @@ public interface Patientdao {
     public int updateRow(Patients patients);
 
     public int deleteRow(int id);
+
+    public  Patients getPatientsById(int Id);
 }
 

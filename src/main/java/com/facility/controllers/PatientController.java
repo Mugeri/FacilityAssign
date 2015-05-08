@@ -22,7 +22,7 @@ public class PatientController {
     @RequestMapping("/")
     public ModelAndView hello(){
         ModelAndView model = new ModelAndView();
-        model.addObject("msg", "WELCOME TO SPRING MVC");
+        model.addObject("msg", "WELCOME TO THE FACILITY");
         model.setViewName("hello");
         return model;
     }
@@ -46,7 +46,7 @@ public class PatientController {
     }
     @RequestMapping("/list")
     public void list() {
-        List<com.facility.models.Patients> patientList = patientService.getList();
+        List<Patients> patientList = patientService.getList();
         for (Patients patient : patientList) {
             System.out.println(patient.getFirst_name() + " " + patient.getLast_name() + " " + patient.getDob());
         }

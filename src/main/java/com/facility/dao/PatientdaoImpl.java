@@ -38,9 +38,19 @@ public class PatientdaoImpl implements Patientdao {
         public List<Patients> getList() {
             Session session = sessionFactory.openSession();
             @SuppressWarnings("unchecked")
-            List<Patients> patientsList = session.createQuery("from ").list();
+            List<Patients> patientsList = session.createQuery("from Patients" ).list();
             session.close();
             return patientsList;
+        }
+
+        @Override
+        public Patients getPatientsById(int id){
+            Session session = sessionFactory.openSession();
+            Criteria criteria = session.createCriteria(Patients.class);
+            criteria.add(Restrictions.eq("id", id));
+            Patients patients = (Patients) criteria.uniqueResult();
+            session.close();
+            return patients;
         }
 
         @Override

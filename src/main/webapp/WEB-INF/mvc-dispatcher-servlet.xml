@@ -31,6 +31,7 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.facility.models.Patients</value>
+				<value>com.facility.models.Drugs</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -51,6 +52,8 @@
 
 	<bean id="patientdaoImpl" class="com.facility.dao.PatientdaoImpl" />
 	<bean id="patientServiceImpl" class="com.facility.services.PatientServiceImpl" />
+	<bean id="drugdaoImpl" class="com.facility.dao.DrugdaoImpl"/>
+	<bean id="drugServiceImpl" class="com.facility.services.DrugServiceImpl"/>
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/views/"/>
 		<property name="suffix" value=".jsp"/>
